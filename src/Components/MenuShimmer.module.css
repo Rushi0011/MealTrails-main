@@ -1,0 +1,285 @@
+/* Menu Loading Spinner */
+.menuLoadingSpinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1100px;
+  padding: 40px 20px;
+}
+
+.menuSpinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #ff5858;
+  border-radius: 50%;
+  animation: menuSpin 1s linear infinite;
+}
+
+@keyframes menuSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.menuLoadingText {
+  margin-top: 24px;
+  font-size: 20px;
+  color: #666;
+  font-weight: 500;
+}
+
+.menuLoadingSubtext {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Menu Shimmer Container */
+.menuShimmerContainer {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Restaurant Info Shimmer */
+.restaurantInfoShimmer {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.restaurantNameShimmer {
+  height: 36px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin: 0 auto 12px;
+  width: 300px;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+.restaurantDetailShimmer {
+  height: 16px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin: 8px auto;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+.restaurantDetailShort {
+  width: 200px;
+}
+
+.restaurantDetailMedium {
+  width: 250px;
+}
+
+.restaurantDetailLong {
+  width: 300px;
+}
+
+/* Menu Title Shimmer */
+.menuTitleShimmer {
+  height: 26px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  width: 120px;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Menu Cards Shimmer */
+.menuCardsShimmer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menuCardShimmer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.menuCardShimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: menuShimmer 2s infinite;
+}
+
+@keyframes menuShimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.menuDetailsShimmer {
+  flex: 1;
+  max-width: 70%;
+}
+
+.menuItemNameShimmer {
+  height: 18px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: 80%;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+.menuPriceShimmer {
+  height: 16px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin: 6px 0;
+  width: 60px;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+.menuDescriptionShimmer {
+  height: 14px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin: 4px 0;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+.menuDescriptionLine1 {
+  width: 95%;
+}
+
+.menuDescriptionLine2 {
+  width: 85%;
+}
+
+.menuDescriptionLine3 {
+  width: 60%;
+}
+
+.menuButtonShimmer {
+  height: 32px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  margin-top: 12px;
+  width: 120px;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+.menuImageShimmer {
+  width: 130px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-left: 16px;
+  flex-shrink: 0;
+  animation: menuPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes menuPulse {
+  0% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Error State */
+.menuError {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1100px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.menuErrorIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.menuErrorTitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.menuErrorMessage {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.menuRetryButton {
+  background: linear-gradient(to right, #ff5858, #f857a6);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.15s ease;
+}
+
+.menuRetryButton:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .menuShimmerContainer {
+    margin: 20px;
+    padding: 16px;
+  }
+  
+  .restaurantNameShimmer {
+    width: 250px;
+  }
+  
+  .restaurantDetailLong {
+    width: 200px;
+  }
+  
+  .restaurantDetailMedium {
+    width: 180px;
+  }
+  
+  .menuCardShimmer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menuDetailsShimmer {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .menuImageShimmer {
+    margin: 12px 0 0;
+    width: 100%;
+    height: 120px;
+  }
+}

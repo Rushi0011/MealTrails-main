@@ -1,0 +1,281 @@
+/* Base Wrapper */
+.body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ======================== */
+/* 🎉 Banner Section (Hero) */
+/* ======================== */
+.heroSection {
+  background: linear-gradient(135deg, #fff5ec 0%, #ffd6c2 100%);
+  padding: 70px 20px;
+  text-align: center;
+  border-bottom: 2px solid #ffe0c0;
+}
+
+.heroContent {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.heroContent h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.heroContent p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  padding: 12px 16px;
+  width: 280px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: white;
+}
+
+.searchBtn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.searchBtn:hover {
+  background-color: #e23e3e;
+}
+
+/* =============================== */
+/* 🍽️ Cuisine Filter Circles      */
+/* =============================== */
+/* =============================== */
+/* 🍽️ Cuisine Filter Circles      */
+/* =============================== */
+.cuisineCircles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 30px 20px;
+  background-color: #fffaf6;
+  border-bottom: 1px solid #f0e6e0;
+}
+
+.cuisineCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.cuisineCircle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.cuisineCircle span {
+  font-size: 13px;
+  color: #444;
+  font-weight: 500;
+}
+
+.cuisineCircle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.cuisineCircle.active {
+  border-color: #ff4d4d;
+  background-color: #fff1f1;
+}
+
+@media screen and (max-width: 480px) {
+  .cuisineCircle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cuisineCircle img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cuisineCircle span {
+    font-size: 11px;
+  }
+}
+
+
+/* =============================== */
+/* 🔽 Filter Section (Sort Menu)  */
+/* =============================== */
+.filterSection {
+  text-align: center;
+  margin-top: 10px;
+  background: #fefefe;
+  padding: 20px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.filterSection button {
+  background-color: #ffefef;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #ffcccc;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.filterControls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.filterBtn {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.filterBtn.active {
+  background-color: #ff4d4d;
+  color: white;
+  border-color: #ff4d4d;
+}
+
+/* =========================== */
+/* 🧾 Restaurant Card Section */
+/* =========================== */
+.resContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 40px 20px;
+  background-color: #fdfdfd;
+  flex: 1;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.resetBtn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =========================== */
+/* ❌ Error Notification Box  */
+/* =========================== */
+.errorNotification {
+  background-color: #ffe2e2;
+  color: #c62828;
+  padding: 12px 16px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.retryBtn {
+  margin-top: 8px;
+  background-color: #c62828;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.retryBtn:hover {
+  background-color: #a21d1d;
+}
+
+/* =========================== */
+/* 🦶 Footer Section          */
+/* =========================== */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 14px;
+  border-top: 2px solid #444;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* =========================== */
+/* 📱 Responsive Fixes        */
+/* =========================== */
+@media screen and (max-width: 600px) {
+  .heroContent h1 {
+    font-size: 28px;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .resContainer {
+    grid-template-columns: 1fr;
+  }
+  .cuisineCircle img {
+    width: 100%;
+    height: 100%;
+  }
+}
