@@ -26,3 +26,6 @@ swiggy-proxy/.env
 *.njsproj
 *.sln
 *.sw?
+# Dependency and build folders
+node_modules/
+dist/
