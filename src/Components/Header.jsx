@@ -17,6 +17,7 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.logoContainer}>
         <img className={styles.logo} src={LOGO_URL} alt='MealTrails Logo' />
+        <span className={styles.logoText}>MealTrails</span>
       </div>
 
       <div className={styles.navItems}>
